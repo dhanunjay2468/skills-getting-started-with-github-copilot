@@ -75,10 +75,76 @@ section h3 {
 }
 
 .activity-card ul {
-  list-style-type: disc;
-  padding-left: 20px;
+  padding-left: 0;
   margin-top: 10px;
   color: #555;
+}
+
+.activity-card .participants {
+  margin-top: 10px;
+}
+
+.activity-card .participants-header {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #1a237e;
+}
+
+.activity-card .participants-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 8px;
+  max-height: 120px;
+  overflow-y: auto;
+  gap: 6px;
+}
+
+/* Make each participant readable and visually distinct while preserving bullets */
+.activity-card .participants-list li,
+.activity-card .participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #ffffff, #f4f7ff);
+  border: 1px solid rgba(26, 35, 126, 0.06);
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 6px 0;
+  color: #0b3a7a;
+  font-weight: 500;
+}
+
+/* Delete button next to participant */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+.delete-btn:hover {
+  background: rgba(198, 40, 40, 0.08);
+}
+
+/* Friendly placeholder when no participants */
+.activity-card .no-participants {
+  margin-top: 8px;
+  font-style: italic;
+  color: #777;
+  background: transparent;
+}
+
+/* Slight scrollbar styling for modern browsers */
+.activity-card .participants-list::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.activity-card .participants-list::-webkit-scrollbar-thumb {
+  background: rgba(26,35,126,0.2);
+  border-radius: 6px;
 }
 
 .form-group {
